@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+  <title>Prof. Raucci - AWS Amazon </title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/shop-item.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Aws</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page Content -->
+  <div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+        <h1 class="my-4">Prof. Raucci</h1>
+        <div class="list-group">
+          <a href="#" class="list-group-item active">Category 1</a>
+          <a href="#" class="list-group-item">Category 2</a>
+          <a href="#" class="list-group-item">Category 3</a>
+        </div>
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        <div class="card mt-4">
+          <img class="card-img-top img-fluid" src="/img/aws.png" alt="immagine aws EC2">
+          <div class="card-body">
+            <h3 class="card-title">EC2 aws</h3>
+            <h4></h4>
+            <p class="card-text">
+			<h3><b>Avviare una macchina su AWS</b></h3><br/>
+
+<i><b>Fare il login su AWS Educate. </i></b><br />
+
+Accedere alla propria classe e quindi alla console AWS.<br />
+
+Sulla console AWS, selezionare in alto Servizi->Computer->EC2.<br />
+
+Nel menu' a sinistra, andare su Instances->Instances.<br />
+<i><b>Primo avvio<br /></i></b>
+
+Premere su Launch Instance, lasciare la selezione di default "Amazon Linux 2 AMI (HVM), SSD Volume Type" a 64-bit (x86), premere su Select, lasciare t2.micro, premere Review and Launch.<br />
+
+Aggiungere al security group la porta HTTP.<br />
+
+Avviare l'istanza.<br />
+
+Dalla lista delle istanze, selezionare Connect e seguire le istruzioni.<br />
+
+Per accedere all'istanza dal browser, andare sulla console di aws, selezionare l'istanza, nel pannello in basso selezionare "Public DNS (IPv4)" e copiare la stringa nella barra del browser.<br />
+<i><b> Prima configurazione<br /></i></b>
+
+Una volta fatto l'accesso l'istanza EC2 di AWS, solo la prima volta eseguire i seguenti comandi:<br />
+
+sudo yum update<br />
+sudo yum install git<br />
+sudo amazon-linux-extras install nginx1.12<br />
+
+Scaricate il vostro progetto da GitHub e copiatelo nella cartella servita dal server:<br />
+
+cd<br />
+git clone https://github.com/nickname/startbootstrap-something<br />
+sudo cp -r startbootstrap-something/* /usr/share/nginx/html/<br />
+
+oppure per chi avesse il progetto in locale: <br />
+
+scp -i nomeChiave.pem -r home ec2-users@ec2.......compute1.amazonaws.com:~<br />
+
+Supponendo di avere i file nella cartella home, li trasferisco sul server.<br />
+
+Adesso li spostiamo nella cartella servita dal server ( /usr/share/nginx/html/ ):<br />
+
+sudo cp -r home/* /usr/share/nginx/html<br />
+
+<i><b> Avvii successivi al primo<br /></i></b>
+
+Dalla console AWS EC2, selezionare l'istanza e premere il bottone in alto Actions->Instance state->Start. Connettersi all'istanza.<br />
+
+Avviare il web server:<br />
+
+sudo /usr/sbin/nginx<br />
+
+Per aggiornare il progetto gia' clonato:<br />
+
+cd ~/startbootstrap-something<br />
+git pull<br />
+
+Ricordatevi poi di copiarlo nella cartella servita dal web server, come al primo avvio.<br />
+<i><b> Riavvio di nginx<br /></i></b>
+
+In caso dovesse servire di riavviare nginx:<br />
+
+sudo service nginx restart<br >
+</p>
+            <span class="text-warning">&#9733; &#9733; &#9733; &#9733; &#9734;</span>
+            4.0 stars
+          </div>
+        </div>
+        <!-- /.card -->
+
+        <div class="card card-outline-secondary my-4">
+          <div class="card-header">
+            Product Reviews
+          </div>
+          <div class="card-body">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <hr>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis et enim aperiam inventore, similique necessitatibus neque non! Doloribus, modi sapiente laboriosam aperiam fugiat laborum. Sequi mollitia, necessitatibus quae sint natus.</p>
+            <small class="text-muted">Posted by Anonymous on 3/1/17</small>
+            <hr>
+            <a href="#" class="btn btn-success">Leave a Review</a>
+          </div>
+        </div>
+        <!-- /.card -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+
+  </div>
+  <!-- /.container -->
+
+  <!-- Footer -->
+  <footer class="py-5 bg-dark">
+    <div class="container">
+      <p class="m-0 text-center text-white">Copyright &copy; Your Website 2019</p>
+    </div>
+    <!-- /.container -->
+  </footer>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
